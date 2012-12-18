@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="@string/about_text"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/etSeparator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Try morse code here"
+            android:imeOptions="actionDone"
+            android:maxLines="1"
+            android:singleLine="true" >
+
+            <requestFocus />
+        </EditText>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="3" >
+
+            <Button
+                android:id="@+id/btnTry"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="click"
+                android:text="Try" />
+
+            <Button
+                android:id="@+id/btnSet"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:onClick="click"
+                android:text="Set as separator" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.mopub.mobileads.MoPubView
+        android:id="@+id/adview"
+        android:layout_width="fill_parent"
+        android:layout_height="50px" />
+
+</LinearLayout>
